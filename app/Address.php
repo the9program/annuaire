@@ -20,6 +20,7 @@ use Illuminate\Database\Eloquent\Model;
  * @property Carbon $updated_at
  * @property City $city
  * @property Real $real
+ * @property Clinical $clinical
  */
 class Address extends Model
 {
@@ -50,5 +51,10 @@ class Address extends Model
     public function real()
     {
         return $this->belongsTo(Real::class);
+    }
+
+    public function clinical()
+    {
+        return $this->hasOne(Clinical::class);
     }
 }

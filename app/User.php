@@ -25,6 +25,7 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
  * @property Creator $creator
  * @property Creator $created_by
  * @property Real $real
+ * @property Clinical $clinics
  */
 
 class User extends Authenticatable implements MustVerifyEmail
@@ -83,6 +84,11 @@ class User extends Authenticatable implements MustVerifyEmail
     public function sendEmailVerificationNotification()
     {
         $this->notify(new VerifyEmail);
+    }
+
+    public function clinics()
+    {
+        return $this->hasMany(Clinical::class);
     }
 
 }

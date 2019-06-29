@@ -16,6 +16,7 @@
                             <li><a href="{{ route('address.index') }}">{{ __('personal/address.address') }}</a></li>
                             <li><a href="{{ route('phone.index') }}">{{ __('validation.attributes.mobile') }}</a></li>
                             <li><a href="{{ route('token.index') }}">{{ __('personal/token.tokens') }}</a></li>
+                            <li><a href="{{ route('clinical.index') }}">{{ __('directory/clinical.clinics') }}</a></li>
                         @endif
                     </ul>
                 </nav>

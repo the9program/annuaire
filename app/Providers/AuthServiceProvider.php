@@ -2,6 +2,8 @@
 
 namespace App\Providers;
 
+use App\Clinical;
+use App\Policies\ClinicalPolicy;
 use App\Policies\TokenPolicy;
 use App\Token;
 use Illuminate\Support\Facades\Gate;
@@ -16,6 +18,7 @@ class AuthServiceProvider extends ServiceProvider
      */
     protected $policies = [
         Token::class => TokenPolicy::class,
+        Clinical::class => ClinicalPolicy::class,
     ];
 
     /**
